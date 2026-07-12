@@ -1,0 +1,7 @@
+<!-- There are three types of selectors
+element selectors which just select a specified kind of element through out a file
+class selectors which pick a specified element through a class in div...they 
+are indicated by a dot in css
+id selectors...These make changes to a specified element line in the html code.
+They are indicted by a hush tag in css.
+

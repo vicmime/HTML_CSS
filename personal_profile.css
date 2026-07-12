@@ -1,0 +1,25 @@
+h1{
+  text-align: center;
+}
+#name {
+ width: 800px;
+ border: 2px solid black;
+ padding: 20px;
+ margin: 30px;
+}
+
+.hobbies {display: flex;}
+.skills {display: flex;}
+
+body {background-color: #FFFACF;}
+
+.hobby img,
+.skills img{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.profile-image{
+    display: block;
+    margin: 20px auto;
+}
