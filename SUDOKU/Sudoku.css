@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(100,65,35);
+}
+
+h1 {
+  font-size: clamp(40px, 8vw, 115px);
+  text-align: center;
+  color: rgb(246, 247, 216);
+}
+
+.sudoku {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+
+  width: 90%;
+  max-width: 450px;
+  aspect-ratio: 1/1;
+
+  background-color: white;
+  border: 3px solid black;
+  margin: 0 auto;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: clamp(14px, 3vw, 24px);
+
+  border: 1px solid #ccc;
+}
+
+
+/* Thick vertical lines after columns 3 and 6 */
+.cell:nth-child(3n) {
+  border-right: 3px solid black;
+}
+
+/* Remove extra thick line on the last column */
+.cell:nth-child(9n) {
+  border-right: none;
+}
+
+
+/* Thick horizontal lines after rows 3 and 6 */
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) {
+  border-bottom: 3px solid black;
+}
+
+
+/* Remove the thin line below the thick line */
+.cell:nth-child(n+28):nth-child(-n+36),
+.cell:nth-child(n+55):nth-child(-n+63) {
+  border-top: none;
+}
+
+.cellA {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: clamp(14px, 3vw, 24px);
+
+
+}
